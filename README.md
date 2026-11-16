@@ -267,20 +267,3 @@ npm run build
 ```
 
 The test suite includes examples of tokenization, parsing and recovery, name resolution, journey structure, invalid interchanges, branch services, suggested fixes, and expected journey output. These checks are useful for regression detection; they do not independently prove that the complete real-world network is current or that every possible input is handled correctly.
-
-> [!TIP]
-> If Vite or Vitest reports a missing or rejected native Rolldown binding, check the Node.js version and operating-system security policy, then reinstall dependencies with `npm ci`. A fresh installation and build should be verified on the machine used for evaluation.
-
-## ⚠️ Known limitations and future work
-
-- The embedded network is a manually maintained snapshot and does not provide live service or timetable information.
-- Name normalization removes punctuation, so unexpected punctuation in a station or line name may be accepted instead of reported as a lexical error.
-- Semantic resolution is reflected in diagnostics and the network view, but a dedicated per-program symbol table and phase-by-phase semantic state are not yet displayed.
-- The faster-route recommendation is not an automatic optimization pass, and the project does not generate machine code or multiple target formats.
-- Future work could improve lexical validation, add semantic and optimization visualizations, expand and update the network, and support additional output targets.
-
----
-
-<div align="center">
-  Built to explore compiler design through Delhi Metro journeys 🚇
-</div>
